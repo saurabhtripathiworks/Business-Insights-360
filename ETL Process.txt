@@ -1,0 +1,76 @@
+ETL Process Notes - Business Insights 360 Dashboard
+Overview
+The ETL process for the Business Insights 360 Dashboard involves importing data from a MySQL database, transforming it, and loading it into Power BI to create an interactive and comprehensive business analysis dashboard for the hardware firm, Atliq. This process includes data extraction, transformation, loading, and modeling to provide valuable insights into key metrics such as Net Sales, Gross Margin, and Profit & Loss.
+
+Data Extraction
+Source Data:
+
+Database: MySQL
+Tables:
+Sales
+Products
+Customers
+Regions
+Orders
+Forecasts
+Connection Setup:
+
+Imported the MySQL database into Power BI using the MySQL connector.
+Established a direct connection to ensure real-time data updates and interactions.
+Data Transformation
+Data Cleaning:
+
+Removed Duplicates: Ensured no duplicate records were present.
+Handled Missing Values: Addressed missing values to maintain data integrity.
+Data Formatting: Standardized formats for dates, currencies, and other data types.
+Data Transformation:
+
+Filtered Data: Applied filters to include relevant records and exclude unnecessary data.
+Calculated Columns: Created columns such as:
+Profit Margin
+Sales Growth Rate
+Aggregated Data: Summarized data to support high-level analysis.
+Data Modeling
+Table Relationships:
+
+Fact Tables:
+Sales: Contains detailed sales records.
+Orders: Information on customer orders.
+Dimension Tables:
+Products: Product details.
+Customers: Customer details.
+Regions: Geographic regions.
+Relationships:
+Linked Sales to Products through ProductID.
+Linked Sales to Customers through CustomerID.
+Linked Sales to Regions through RegionID.
+Created relationships between fact and dimension tables for comprehensive analysis.
+Key Measures Table:
+
+Key Measures: Includes metrics such as:
+Total Net Sales
+Total Gross Margin
+Gross Margin Percentage
+Forecast Accuracy
+Profit & Loss metrics
+Additional Tables:
+
+Fact Actual Estimates: Includes columns such as Actual Sales, Estimated Sales, and Variance for performance comparison.
+Data Loading
+Power BI Setup:
+Loaded the transformed data into Power BI.
+Configured all data tables and relationships to enable interactive reporting and analysis.
+Insights
+Overall Metrics:
+Total Net Sales: $7.53 billion
+Total Gross Margin: $7.33 billion
+Gross Margin Percentage: 97.32%
+Forecast Accuracy: 97.5%
+Top Performing Markets:
+APAC: Net Sales $4.05B, Gross Margin $3.94B
+EU: Net Sales $1.66B, Gross Margin $1.62B
+Top Products:
+Notebooks: Net Sales $2.99B, Gross Margin $2.91B
+Peripherals: Net Sales $1.75B, Gross Margin $1.7B
+Conclusion
+The ETL process has effectively prepared and transformed data from a large MySQL database into a structured Power BI dashboard. The dashboard provides a comprehensive view of business performance through key metrics and interactive visualizations, supporting data-driven decision-making.
